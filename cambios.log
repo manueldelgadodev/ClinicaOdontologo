@@ -1,0 +1,63 @@
+[2024-08-07 22:33:47] [ ERROR] [BD:24] Error de Sintaxis en sentencia SQL "CREATE TABLE ODONTOLOGOS (ID INT PRIMARY KEY, NUMMATRICULA INT NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT PRIMARY KEY, NUMMATRICULA INT NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT PRIMARY KEY, NUMMATRICULA INT NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL [42001-224]
+[2024-08-07 22:33:47] [ ERROR] [OdontologoDAOH2:28] Table "ODONTOLOGOS" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGOS VALUES(?,?,?,?) [42104-224]
+[2024-08-07 22:36:02] [ INFO ] [BD:22] tabla creada con exito
+[2024-08-07 22:36:02] [ INFO ] [OdontologoDAOH2:26] datos cargados con exito
+[2024-08-07 23:44:32] [ INFO ] [BD:26] tabla creada con exito
+[2024-08-07 23:44:32] [ INFO ] [BD:30] Datos cargados con exito
+[2024-08-07 23:47:10] [ INFO ] [BD:26] tabla creada con exito
+[2024-08-07 23:47:10] [ INFO ] [BD:30] Datos cargados con exito
+[2024-08-07 23:54:38] [ ERROR] [BD:32] La base de datos puede que ya esté siendo utilizada: "C:/Users/Juan Manuel Delgado/DaoOdontologia.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Juan Manuel Delgado/DaoOdontologia.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+[2024-08-07 23:54:38] [ ERROR] [OdontologoDAOH2:77] La base de datos puede que ya esté siendo utilizada: "C:/Users/Juan Manuel Delgado/DaoOdontologia.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Juan Manuel Delgado/DaoOdontologia.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+[2024-08-07 23:54:53] [ INFO ] [BD:26] tabla creada con exito
+[2024-08-07 23:54:53] [ INFO ] [BD:30] Datos cargados con exito
+[2024-08-07 23:55:17] [ INFO ] [BD:26] tabla creada con exito
+[2024-08-07 23:55:17] [ INFO ] [BD:30] Datos cargados con exito
+[2024-08-08 11:27:06] [ INFO ] [BD:26] tabla creada con exito
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:47] Inicio - Listar Odontólogos
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:58] Listado de todos los odontólogos: []
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:32] Datos cargados con exito
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:32] Datos cargados con exito
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:47] Inicio - Listar Odontólogos
+[2024-08-08 11:27:06] [ INFO ] [OdontologoDAOH2:58] Listado de todos los odontólogos: [Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}, Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}]
+[2024-08-08 11:28:50] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:28:51] [ ERROR] [OdontologoDAOH2:39] Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 1111, 'Juan', 'Perez')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 1111, 'Juan', 'Perez')"; SQL statement:
+INSERT INTO ODONTOLOGIA(NUMEROMATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [23505-224]
+[2024-08-08 11:28:51] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}
+[2024-08-08 11:28:51] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:28:51] [ ERROR] [OdontologoDAOH2:39] Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 2222, 'Pedro', 'Ramirez')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 2222, 'Pedro', 'Ramirez')"; SQL statement:
+INSERT INTO ODONTOLOGIA(NUMEROMATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [23505-224]
+[2024-08-08 11:28:51] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}
+[2024-08-08 11:28:51] [ INFO ] [OdontologoDAOH2:47] Inicio - Listar Odontólogos
+[2024-08-08 11:28:51] [ INFO ] [OdontologoDAOH2:58] Listado de todos los odontólogos: [Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}, Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}]
+[2024-08-08 11:30:46] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:30:46] [ ERROR] [OdontologoDAOH2:39] Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 1111, 'Juan', 'Perez')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 1111, 'Juan', 'Perez')"; SQL statement:
+INSERT INTO ODONTOLOGIA(NUMEROMATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [23505-224]
+[2024-08-08 11:30:46] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}
+[2024-08-08 11:30:46] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:30:46] [ ERROR] [OdontologoDAOH2:39] Violación de indice de Unicidad ó Clave primaria: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 2222, 'Pedro', 'Ramirez')"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.ODONTOLOGIA(NUMEROMATRICULA) ( /* key:0 */ 2222, 'Pedro', 'Ramirez')"; SQL statement:
+INSERT INTO ODONTOLOGIA(NUMEROMATRICULA, NOMBRE, APELLIDO) VALUES (?,?,?) [23505-224]
+[2024-08-08 11:30:46] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}
+[2024-08-08 11:30:46] [ INFO ] [OdontologoDAOH2:47] Inicio - Listar Odontólogos
+[2024-08-08 11:30:46] [ INFO ] [OdontologoDAOH2:61] Listado de todos los odontólogos: [Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}, Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}]
+[2024-08-08 11:37:48] [ INFO ] [BD:23] tabla creada con exito
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:32] Datos cargados con exito
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:21] Inicio - Guardar un Odontólogo
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:32] Datos cargados con exito
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:41] Odontólogo guardado: Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:47] Inicio - Listar Odontólogos
+[2024-08-08 11:37:48] [ INFO ] [OdontologoDAOH2:61] Listado de todos los odontólogos: [Odontologo{numMatricula=1111, nombre='Juan', apellido='Perez'}, Odontologo{numMatricula=2222, nombre='Pedro', apellido='Ramirez'}]
